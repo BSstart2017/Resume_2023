@@ -1,5 +1,9 @@
 import {LanguageButton, Logo, SocialButton, WriteMeButton} from "@/common/components/elements";
 import {DrawerMenu, Navigation} from "@/modules/navbar/components";
+import {Env} from "@env";
+
+const firstName = Env.OWNER_FIRST_NAME
+const lastName = Env.OWNER_LAST_NAME
 
 const Navbar = () => {
     return (
@@ -7,8 +11,8 @@ const Navbar = () => {
             <div className="flex items-center space-x-3">
                 <Logo/>
                 <div className="font-semibold text-xl">
-                    <h1>Aliaksandr</h1>
-                    <h1>Andreyeu</h1>
+                    <h1>{firstName}</h1>
+                    <h1>{lastName}</h1>
                 </div>
                 <LanguageButton/>
             </div>
