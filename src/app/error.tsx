@@ -14,7 +14,7 @@ export default function Error({error, reset}: PropsType) {
   }, [error])
   
   return (
-    <div className="absolute inset-0 flex items-center justify-center">
+    <div className="absolute inset-52 flex items-center justify-center">
       <div className="bg-red-200 p-4 rounded-lg shadow-md text-red-800">
         <h2 className="text-xl font-semibold mb-2">Oops! Something went wrong</h2>
         <p className="text-sm mb-4">{error.message}</p>

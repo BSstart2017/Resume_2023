@@ -1,5 +1,6 @@
 import { FC } from "react";
 import {Navbar} from "@/modules/navbar";
+import {Footer} from "@/common/components/footer";
 
 type PropsType = {
   children: React.ReactNode
@@ -7,10 +8,12 @@ type PropsType = {
 
 const BaseLayout: FC<PropsType> = ({ children }) => {
   return (
-    <body className="h-full w-full p-0 m-0 bg-blue-950 text-white text-base">
-      <Navbar />
+    <body className="flex flex-col items-center min-h-screen w-full p-0 m-0 bg-fuchsia-700 text-white text-base">
+      <Navbar/>
+      <div className="flex-1 flex w-8/12 min-h-0">
         {children}
-      {/*<Footer />*/}
+      </div>
+      <Footer />
     </body>
   );
 };

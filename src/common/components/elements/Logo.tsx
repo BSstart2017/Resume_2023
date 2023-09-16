@@ -1,11 +1,22 @@
 import {FC} from 'react';
 import Link from "next/link";
 import {route} from "@/common/definitions/app/route";
+import Image from "next/image";
 
-const Logo: FC = () => {
+type PropsType = {
+  size: number
+}
+
+const Logo: FC<PropsType> = ({size}) => {
     return (
         <Link href={route.HOME}>
-            <img src={"/logo.png"} alt="" className="h-24 w-24 rounded-full"/>
+            <Image
+              src={"/logo.png"}
+              height={size}
+              width={size}
+              alt="Avatar"
+              className="rounded-full"
+            />
         </Link>
     );
 };

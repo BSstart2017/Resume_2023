@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <header className="relative flex w-full md:justify-around justify-between md:px-0 px-3 md:py-5 py-3 bg-gray-800 text-white">
             <div className="flex items-center space-x-3">
-                <Logo/>
+                <Logo size={80}/>
                 <div className="font-semibold text-xl">
                     <h1>{firstName}</h1>
                     <h1>{lastName}</h1>
