@@ -7,9 +7,9 @@ const lastName = Env.OWNER_LAST_NAME
 
 const Navbar = () => {
     return (
-        <header className="relative flex w-full md:justify-around justify-between md:px-0 px-3 md:py-5 py-3 bg-gray-800 text-white">
+        <header className="relative flex w-full md:justify-around justify-between md:px-0 px-3 md:py-5 py-3 bg-gray-800 text-white min-h-[120px]">
             <div className="flex items-center space-x-3">
-                <Logo size={80}/>
+                <Logo/>
                 <div className="font-semibold text-xl">
                     <h1>{firstName}</h1>
                     <h1>{lastName}</h1>

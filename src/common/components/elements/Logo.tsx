@@ -4,16 +4,16 @@ import {route} from "@/common/definitions/app/route";
 import Image from "next/image";
 
 type PropsType = {
-  size: number
+  size?: number
 }
 
-const Logo: FC<PropsType> = ({size}) => {
+const Logo: FC<PropsType> = ({size = 80}) => {
     return (
         <Link href={route.HOME}>
             <Image
               src={"/logo.png"}
-              height={size}
               width={size}
+              height={size}
               alt="Avatar"
               className="rounded-full"
             />

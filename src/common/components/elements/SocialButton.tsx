@@ -1,19 +1,34 @@
 'use client'
 
-import React from 'react';
+import React, {FC} from 'react';
 import {Env} from "@env";
+import Image from "next/image";
+
+type PropsType = {
+  size?: number
+}
 
 const urlGit = Env.SOCIAL_LINK_GIT
 const urlLinked = Env.SOCIAL_LINK_LINKED
 
-const SocialButton = () => {
+const SocialButton:FC<PropsType> = ({size = 24}) => {
     return (
         <div className="lg:flex hidden items-center space-x-4">
           <a href={urlGit} target="_blank" rel="noopener noreferrer">
-            <img src={"/images/git.svg"} alt="" className="h-6 w-6" />
+            <Image
+              src={"/images/git.svg"}
+              alt="git_icon"
+              width={size}
+              height={size}
+            />
           </a>
           <a href={urlLinked} target="_blank" rel="noopener noreferrer">
-            <img src={"/images/linked.svg"} alt="" className="h-6 w-6 cursor-pointer" />
+            <Image
+              src={"/images/linked.svg"}
+              alt="linked_icon"
+              width={size}
+              height={size}
+            />
           </a>
         </div>
     );
