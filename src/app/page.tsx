@@ -1,7 +1,9 @@
+import { HomeSectionStart } from "@/modules/home";
+
 export default function HomePage() {
   return (
-      <div>
-         Home
-      </div>
+      <main className={'min-w-full p-5'}>
+        <HomeSectionStart />
+      </main>
   )
 }

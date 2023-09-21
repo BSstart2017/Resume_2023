@@ -1,7 +1,7 @@
-export default function ResumePage() {
+export default function SkillsPage() {
   return (
       <div>
-        Resume
+        Skills
       </div>
   )
 }
